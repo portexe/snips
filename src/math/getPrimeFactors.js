@@ -18,7 +18,6 @@ export const getPrimeFactors = num => {
             return i;
           }
         }
-
         return 1;
       })(divisor),
     );
