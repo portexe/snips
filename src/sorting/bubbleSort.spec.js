@@ -30,17 +30,17 @@ describe('bubbleSort', () => {
   });
 
   it('Throw error if array contains values other than numbers', () => {
-    expect(() => bubbleSort([1, 2, '3'])).to.throw('All values in the input must be numbers');
-    expect(() => bubbleSort([1, [], 3])).to.throw('All values in the input must be numbers');
-    expect(() => bubbleSort([{}, 2, 3])).to.throw('All values in the input must be numbers');
-    expect(() => bubbleSort([true])).to.throw('All values in the input must be numbers');
-  });
-
-  it('Throws error if array is too large for bubble sort', () => {
-    const testInput = Array(10_001);
-    testInput.fill(1);
-    expect(() => bubbleSort(testInput)).to.throw(
-      'Please use a different sorting algorithm for sets larger than 10,000',
+    expect(() => bubbleSort([1, 2, '3'])).to.throw(
+      'All values in the input must be numbers',
+    );
+    expect(() => bubbleSort([1, [], 3])).to.throw(
+      'All values in the input must be numbers',
+    );
+    expect(() => bubbleSort([{}, 2, 3])).to.throw(
+      'All values in the input must be numbers',
+    );
+    expect(() => bubbleSort([true])).to.throw(
+      'All values in the input must be numbers',
     );
   });
 });
