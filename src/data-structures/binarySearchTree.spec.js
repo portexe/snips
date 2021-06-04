@@ -70,7 +70,7 @@ describe('binarySearchTree', () => {
 
   it('Throw error if input is not a number or array of numbers', () => {
     expect(() => new BinarySearchTreeNode('Hello World')).to.throw(
-      'Input must be an array or an array of numbers',
+      'Input must be a number or an array of numbers',
     );
   });
 

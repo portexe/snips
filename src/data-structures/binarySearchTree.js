@@ -22,7 +22,7 @@ export class BinarySearchTreeNode {
         }
       }
     } else {
-      throw new Error('Input must be an array or an array of numbers');
+      throw new Error('Input must be a number or an array of numbers');
     }
   }
 
