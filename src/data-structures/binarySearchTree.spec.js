@@ -4,33 +4,33 @@ import { BinarySearchTreeNode } from './binarySearchTree.js';
 describe('binarySearchTree', () => {
   it('Builds a tree from an array', () => {
     const testInput = [0, 9, 8, 7, 6, 5, 4, 3, 2, 1];
-    const rootNode = new BinarySearchTreeNode(testInput);
-    expect(rootNode.value).to.eql(0);
+    const tree = new BinarySearchTreeNode(testInput);
+    expect(tree.value).to.eql(0);
   });
 
   it('Sums up all of the value of the tree', () => {
     const testInput = [2, 4, 6, 8, 10, -10, 0];
-    const rootNode = new BinarySearchTreeNode(testInput);
-    expect(rootNode.sum()).to.eql(20);
+    const tree = new BinarySearchTreeNode(testInput);
+    expect(tree.sum()).to.eql(20);
   });
 
   it('Should insert lesser numbers to the left', () => {
     const testInput = 0;
-    const rootNode = new BinarySearchTreeNode(testInput);
+    const tree = new BinarySearchTreeNode(testInput);
 
-    rootNode.insert(-1);
+    tree.insert(-1);
 
-    expect(rootNode.left.value).to.eql(-1);
-    expect(rootNode.right).to.eql(null);
+    expect(tree.left.value).to.eql(-1);
+    expect(tree.right).to.eql(null);
   });
   it('Should insert lesser numbers to the left', () => {
     const testInput = 0;
-    const rootNode = new BinarySearchTreeNode(testInput);
+    const tree = new BinarySearchTreeNode(testInput);
 
-    rootNode.insert(1);
+    tree.insert(1);
 
-    expect(rootNode.left).to.eql(null);
-    expect(rootNode.right.value).to.eql(1);
+    expect(tree.left).to.eql(null);
+    expect(tree.right.value).to.eql(1);
   });
 
   it("Should sort it's values and return it as an array", () => {
@@ -91,8 +91,8 @@ describe('binarySearchTree', () => {
 
   it("Finds elements within it's tree (if it exists) given a value", () => {
     const testInput = [0, 9, 8, 7, 6, 5, 4, 3, 2, 1];
-    const rootNode = new BinarySearchTreeNode(testInput);
-    const foundNode = rootNode.find(5);
+    const tree = new BinarySearchTreeNode(testInput);
+    const foundNode = tree.find(5);
     expect(foundNode.value).to.eql(5);
   });
 });
